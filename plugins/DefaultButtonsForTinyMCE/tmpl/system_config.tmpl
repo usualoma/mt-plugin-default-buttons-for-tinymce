@@ -1,0 +1,74 @@
+<mtapp:setting
+    id="default_buttons_for_tinymce_overwrite_config"
+    label="<__trans phrase="Overwrite TinyMCE config">"
+>
+<input type="checkbox" value="1" id="default_buttons_for_tinymce_overwrite_config" name="overwrite_config" <mt:If name="overwrite_config">checked="checked"</mt:if> />
+</mtapp:setting>
+
+
+<div id="default_buttons_for_tinymce_configs">
+
+<mtapp:setting
+    id="default_buttons_for_tinymce_plugins"
+    label="<__trans phrase="Plugins">"
+>
+<input id="default_buttons_for_tinymce_plugins" name="plugins" value="<mt:Var name="plugins">" class="text" />
+</mtapp:setting>
+
+<mtapp:setting
+    id="default_buttons_for_tinymce_plugin_mt_wysiwyg_buttons1"
+    label="<__trans phrase="WYSIWYG buttons 1">"
+>
+<input id="default_buttons_for_tinymce_plugin_mt_wysiwyg_buttons1" name="plugin_mt_wysiwyg_buttons1" value="<mt:Var name="plugin_mt_wysiwyg_buttons1">" class="text" />
+</mtapp:setting>
+
+<mtapp:setting
+    id="default_buttons_for_tinymce_plugin_mt_wysiwyg_buttons2"
+    label="<__trans phrase="WYSIWYG buttons 2">"
+>
+<input id="default_buttons_for_tinymce_plugin_mt_wysiwyg_buttons2" name="plugin_mt_wysiwyg_buttons2" value="<mt:Var name="plugin_mt_wysiwyg_buttons2">" class="text" />
+</mtapp:setting>
+
+<mtapp:setting
+    id="default_buttons_for_tinymce_plugin_mt_wysiwyg_buttons3"
+    label="<__trans phrase="WYSIWYG buttons 3">"
+>
+<input id="default_buttons_for_tinymce_plugin_mt_wysiwyg_buttons3" name="plugin_mt_wysiwyg_buttons3" value="<mt:Var name="plugin_mt_wysiwyg_buttons3">" class="text" />
+</mtapp:setting>
+
+<mtapp:setting
+    id="default_buttons_for_tinymce_plugin_mt_wysiwyg_buttons4"
+    label="<__trans phrase="WYSIWYG buttons 4">"
+>
+<input id="default_buttons_for_tinymce_plugin_mt_wysiwyg_buttons4" name="plugin_mt_wysiwyg_buttons4" value="<mt:Var name="plugin_mt_wysiwyg_buttons4">" class="text" />
+</mtapp:setting>
+
+<mtapp:setting
+    id="default_buttons_for_tinymce_plugin_mt_wysiwyg_buttons5"
+    label="<__trans phrase="WYSIWYG buttons 5">"
+>
+<input id="default_buttons_for_tinymce_plugin_mt_wysiwyg_buttons5" name="plugin_mt_wysiwyg_buttons5" value="<mt:Var name="plugin_mt_wysiwyg_buttons5">" class="text" />
+</mtapp:setting>
+
+</div>
+
+
+<script type="text/javascript">
+jQuery(function($) {
+    var $configs = $('#default_buttons_for_tinymce_configs');
+    $('#default_buttons_for_tinymce_overwrite_config').change(function() {
+        if ($(this).attr('checked')) {
+            $configs.show();
+        }
+        else {
+            $configs.hide();
+        }
+    }).change();
+
+    if ($('#default_buttons_for_tinymce_plugins').val() == '') {
+        $('#default_buttons_for_tinymce_configs :input').each(function() {
+            this.value = MT.Editor.TinyMCE.config[this.name] || '';
+        });
+    }
+});
+</script>

@@ -1,0 +1,28 @@
+id: DefaultButtonsForTinyMCE
+name: DefaultButtonsForTinyMCE
+version: 1.00
+THEdescription: <__trans phrase="This plugin enables the Movable Type to use buttons included in the TinyMCE.">
+author_name: <__trans phrase="ToI Inc.">
+author_link: http://tec.toi-planning.net/
+plugin_link: https://github.com/usualoma/mt-plugin-default-buttons-for-tinymce/
+
+l10n_class: DefaultButtonsForTinyMCE::L10N
+
+editors:
+    tinymce:
+        extension: default_buttons_for_tinymce_extension.tmpl
+
+config_template: system_config.tmpl
+
+settings:
+    overwrite_config:
+    plugins:
+    plugin_mt_wysiwyg_buttons1:
+    plugin_mt_wysiwyg_buttons2:
+    plugin_mt_wysiwyg_buttons3:
+    plugin_mt_wysiwyg_buttons4:
+    plugin_mt_wysiwyg_buttons5:
+
+callbacks:
+    MT::App::CMS::template_param.cfg_plugin: $DefaultButtonsForTinyMCE::DefaultButtonsForTinyMCE::App::template_param_cfg_plugin
+    MT::App::CMS::template_source.default_buttons_for_tinymce_extension: $DefaultButtonsForTinyMCE::DefaultButtonsForTinyMCE::App::template_source_extension
