@@ -6,11 +6,11 @@ In the MT 5.2, we need to create css file for adjustment in order to use buttons
 However, we can use without adjustment those buttons, after installing this plugin. 
 
 
-## Screenshot
+### Screenshot
 
 ![Screenshot](https://github.com/usualoma/mt-plugin-default-buttons-for-tinymce/raw/master/artwork/screenshot.png)
 
-## System Config
+### System Config
 
 ![System Config](https://github.com/usualoma/mt-plugin-default-buttons-for-tinymce/raw/master/artwork/system_config.png)
 
