@@ -56,14 +56,14 @@
 <script type="text/javascript">
 jQuery(function($) {
     var $configs = $('#default_buttons_for_tinymce_configs');
-    $('#default_buttons_for_tinymce_overwrite_config').change(function() {
-        if ($(this).attr('checked')) {
+    $('#default_buttons_for_tinymce_overwrite_config').on('change', function() {
+        if ($(this).prop('checked')) {
             $configs.show();
         }
         else {
             $configs.hide();
         }
-    }).change();
+    }).triggerHandler('change');
 
     if ($('#default_buttons_for_tinymce_plugins').val() == '') {
         $('#default_buttons_for_tinymce_configs :input').each(function() {
