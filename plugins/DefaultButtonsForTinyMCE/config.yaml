@@ -1,6 +1,6 @@
 id: DefaultButtonsForTinyMCE
 name: DefaultButtonsForTinyMCE
-version: 1.01
+version: 1.02
 THEdescription: <__trans phrase="This plugin enables the Movable Type to use buttons included in the TinyMCE.">
 author_name: <__trans phrase="ToI Inc.">
 author_link: http://tec.toi-planning.net/
